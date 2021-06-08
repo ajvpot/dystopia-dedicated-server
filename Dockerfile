@@ -79,7 +79,7 @@ WORKDIR ${HOME}
 # Game Server environment variables
 ENV GAME_MAP "dys_detonate"
 ENV GAME_MAXPLAYERS 16
-ENV GAME_TICKRATE 64
+ENV GAME_TICKRATE 66
 ENV GAME_ARGS "-game ${GAME_PATH}/${GAME_DIR} +maxplayers ${GAME_MAXPLAYERS} +map ${GAME_MAP} -tickrate ${GAME_TICKRATE} +log on +dys_stats_enabled 0"
 
 ENV LD_LIBRARY_PATH "${GAME_PATH}/bin:${GAME_PATH}/bin/linux32"
