@@ -21,7 +21,7 @@ RUN sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen \
 # Install SteamCmd
 RUN mkdir -p "${STEAMCMDDIR}" \
 	&& mkdir -p "${GAME_PATH}/${GAME_DIR}" \
-	&& mkdir -p "${GAME_PATH}" \
+	&& mkdir -p "${GAME_PATH}/steamapps" \
 	&& wget -qO- 'https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz' | tar xvzf - -C "${STEAMCMDDIR}"
 
 # Install Dystopia
