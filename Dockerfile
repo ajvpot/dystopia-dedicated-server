@@ -32,11 +32,11 @@ RUN "${STEAMCMDDIR}/steamcmd.sh" \
 		+quit
 
 # Install MetaMod (comment out for tournament servers)
-RUN wget -qO- 'https://mms.alliedmods.net/mmsdrop/1.11/mmsource-1.11.0-git1144-linux.tar.gz' | tar xvzf - -C "${GAME_PATH}/${GAME_DIR}" \
+RUN wget -qO- 'https://mms.alliedmods.net/mmsdrop/1.11/mmsource-1.11.0-git1145-linux.tar.gz' | tar xvzf - -C "${GAME_PATH}/${GAME_DIR}" \
 	&& rm "${GAME_PATH}/${GAME_DIR}/addons/metamod_x64.vdf"
 
 # Install Sourcemod (comment out for tournament servers)
-RUN wget -qO- 'https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6502-linux.tar.gz' | tar xvzf - -C "${GAME_PATH}/${GAME_DIR}"
+RUN wget -qO- 'https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6509-linux.tar.gz' | tar xvzf - -C "${GAME_PATH}/${GAME_DIR}"
 
 
 FROM debian:buster-slim
