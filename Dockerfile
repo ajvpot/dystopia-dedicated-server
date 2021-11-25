@@ -26,8 +26,8 @@ RUN mkdir -p "${STEAMCMDDIR}" \
 
 # Install Dystopia
 RUN "${STEAMCMDDIR}/steamcmd.sh" \
-		+login anonymous \
 		+force_install_dir "${GAME_PATH}" \
+		+login anonymous \
 		+app_update 17585 \
 		+quit
 
