@@ -6,7 +6,7 @@ Provide a containerized version of Dystopia dedicated server for general public 
 
 ## Configuration
 
-1. Edit the `Dockerfile` ENVs at the bottom of the file to set the command line options for the game server.
+1. Edit the `Dockerfile` ARGs at the bottom of the file to set the command line options for the game server or build the image with custom build args.
 1. Edit `etc\cfg\server.cfg` to taste, and optionally add SourceMod admins to `etc\addons\sourcemod\configs\admins.cfg`.  You may also add any additional SourceMod/Metamod files to the `etc\addons` folder and these items will be added to your container image.  Visit the SourceMod website for additional configuration details.
 
 A tournament-style image can be created by commenting out the Metamod and SourceMod installation from the build image.
@@ -45,7 +45,7 @@ Detach with Ctrl+Z then Ctrl+C.
 ## Known Issues
 
 - Enabling stats on the command line options will cause a `segfault` and the server will not boot.
-	- Workaround (untested): you may attempt to use the `server.cfg` to re-enable them, or manually re-enable them once the server has fully initialized.
+	- Workaround: use `server.cfg` to re-enable them, or manually re-enable them once the server has fully initialized.
 
 ## Thanks
 
