@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  dystopia:
+    build: .
+    tty: true
+    ports:
+      - "27016:27016"
+      - "27016:27016/udp"
+      - "27006:27006"
+    volumes:
+      - ../dystopia-data:/data
